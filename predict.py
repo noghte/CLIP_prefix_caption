@@ -44,7 +44,7 @@ WEIGHTS_PATHS = {
 D = torch.device
 CPU = torch.device("cpu")
 
-
+'''
 class Predictor(cog.Predictor):
     def setup(self):
         """Load the model into memory to make running multiple predictions efficient"""
@@ -92,7 +92,7 @@ class Predictor(cog.Predictor):
             return generate_beam(model, self.tokenizer, embed=prefix_embed)[0]
         else:
             return generate2(model, self.tokenizer, embed=prefix_embed)
-
+'''
 
 class MLP(nn.Module):
     def forward(self, x: T) -> T:
